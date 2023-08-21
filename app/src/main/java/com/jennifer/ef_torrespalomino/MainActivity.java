@@ -15,7 +15,6 @@ import com.jennifer.ef_torrespalomino.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
     private ActivityMainBinding binding;
-
     public static String EMAIL = "EMAIL";
     private String email;
     private SharedPreferences sharedPreferences;
