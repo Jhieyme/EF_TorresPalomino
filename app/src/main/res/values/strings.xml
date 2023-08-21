@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">EF_TorresPalomino</string>
+    <string name="app_name">FashionStore</string>
+    <string name="text_email">Email</string>
+    <string name="text_password">Password</string>
+    <string name="name_login">Login</string>
+    <string name="name_title">Fashion\n Store</string>
 </resources>
