@@ -27,6 +27,14 @@ public class LoginActivity extends AppCompatActivity {
 
         sharedPreferences = getSharedPreferences(SESSION_PREFERENCE, MODE_PRIVATE);
 
+        boolean isSessionActivated = sharedPreferences.getBoolean(LoginActivity.SESSION_ACTIVATED, false);
+
+        if (isSessionActivated){
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            finish();
+        }
+
         binding.btnLogin.setEnabled(false);
         binding.btnLogin.setOnClickListener(v -> {
             sharedPreferences.edit().putBoolean(SESSION_ACTIVATED, true).apply();
@@ -48,12 +56,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 validateCredentials();
             }
-
             @Override
             public void afterTextChanged(Editable s) {
             }
@@ -63,15 +69,12 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
             }
-
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 validateCredentials();
             }
-
             @Override
             public void afterTextChanged(Editable s) {
-
             }
         });
     }

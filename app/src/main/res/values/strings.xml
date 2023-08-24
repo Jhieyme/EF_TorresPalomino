@@ -4,4 +4,8 @@
     <string name="text_password">Password</string>
     <string name="name_login">Login</string>
     <string name="name_title">Fashion\n Store</string>
+
+    <string name="name_product">Here you will find the latest fashion trends.</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

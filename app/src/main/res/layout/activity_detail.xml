@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailActivity">
+
+    <TextView
+        android:id="@+id/txtCategoria"
+        android:layout_width="172dp"
+        android:layout_height="28dp"
+        android:text="categoria"
+        android:textAllCaps="true"
+        android:textColorHighlight="@color/md_theme_dark_inverseSurface"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/imgShowDetail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.581" />
+
+    <ImageView
+        android:id="@+id/imgShowDetail"
+        android:layout_width="408dp"
+        android:layout_height="387dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147" />
+
+    <TextView
+        android:id="@+id/txtName"
+        android:layout_width="313dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="18dp"
+        android:text="Nombre del producto"
+        android:textAlignment="center"
+        android:textColorHighlight="@color/md_theme_dark_inverseSurface"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgShowDetail" />
+
+    <TextView
+        android:id="@+id/txtDescrip"
+        android:layout_width="358dp"
+        android:layout_height="142dp"
+        android:layout_marginTop="15dp"
+        android:text="Descripcion del producto"
+        android:textAlignment="center"
+        android:textColorHighlight="@color/md_theme_dark_inverseSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtName" />
+
+    <TextView
+        android:id="@+id/txtprecio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="16dp"
+        android:text="S/. 00.00"
+        android:textAlignment="center"
+        android:textColorHighlight="@color/md_theme_dark_inverseSurface"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtDescrip" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

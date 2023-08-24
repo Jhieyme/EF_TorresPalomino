@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="178dp"
+    android:layout_height="285dp"
+    android:layout_marginHorizontal="8dp"
+    android:layout_marginVertical="8dp"
+    android:background="#FFFFFF">
+
+    <ImageView
+        android:id="@+id/img_show"
+        android:layout_width="177dp"
+        android:layout_height="214dp"
+        android:contentDescription="@null"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="177dp"
+        android:layout_height="36dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:text="Nombre del producto"
+        android:textAlignment="center"
+        android:textColorHighlight="?attr/colorOnPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_show"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/txt_precio"
+        android:layout_width="177dp"
+        android:layout_height="34dp"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="6dp"
+        android:text="S/. 00.00"
+        android:textAlignment="center"
+        android:textColor="@color/md_theme_dark_inverseOnSurface"
+        android:textColorHighlight="?attr/colorOnPrimary"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_name"
+        app:layout_constraintVertical_bias="0.0" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
