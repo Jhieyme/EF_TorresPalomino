@@ -16,7 +16,6 @@ import com.jennifer.ef_torrespalomino.databinding.ActivityMainBinding;
 import com.jennifer.ef_torrespalomino.fragments.HomeFragment;
 
 public class MainActivity extends AppCompatActivity {
-
     private ActivityMainBinding binding;
     public static String EMAIL = "EMAIL";
     private SharedPreferences sharedPreferences;

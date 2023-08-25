@@ -3,12 +3,17 @@ package com.jennifer.ef_torrespalomino;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Toast;
+
 import com.bumptech.glide.Glide;
 import com.jennifer.ef_torrespalomino.databinding.ActivityDetailBinding;
+import com.jennifer.ef_torrespalomino.db.ProductRepository;
+import com.jennifer.ef_torrespalomino.model.ProductEntity;
 
 public class DetailActivity extends AppCompatActivity {
-
     private ActivityDetailBinding binding;
+    private ProductRepository productRepository;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,5 +33,22 @@ public class DetailActivity extends AppCompatActivity {
         binding.txtDescrip.setText(description);
         binding.txtCategoria.setText(category);
         Glide.with(this).load(image).into(binding.imgShowDetail);
+
+
+        productRepository = new ProductRepository(getApplication());
+        binding.btnFavorite.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ProductEntity productEntity = new ProductEntity();
+                productEntity.setTitle(title);
+                productEntity.setPrice(price);
+                productEntity.setDescription(description);
+                productEntity.setCategory(category);
+                productEntity.setImage(image);
+                productRepository.addProduct(productEntity);
+
+                Toast.makeText(DetailActivity.this, "Producto agregado a favoritos", Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 }
