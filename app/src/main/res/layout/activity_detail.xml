@@ -27,10 +27,10 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/imgShowDetail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.004"
+        app:layout_constraintHorizontal_bias="0.066"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.164" />
+        app:layout_constraintVertical_bias="0.179" />
 
     <ImageView
         android:id="@+id/imgShowDetail"
@@ -49,14 +49,13 @@
         style="@style/Widget.Material3.Button.Icon"
         android:layout_width="48dp"
         android:layout_height="48dp"
-        android:layout_marginTop="456dp"
+        android:layout_marginTop="512dp"
         android:layout_marginEnd="16dp"
         android:contentDescription="@null"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_favorite_border"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-         />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/txtName"
@@ -99,14 +98,5 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDescrip" />
 
-    <TextView
-        android:id="@+id/txt_error"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtprecio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

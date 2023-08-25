@@ -14,8 +14,6 @@ public class FavoriteActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         binding = ActivityFavoriteBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-
-
     }
 
 }

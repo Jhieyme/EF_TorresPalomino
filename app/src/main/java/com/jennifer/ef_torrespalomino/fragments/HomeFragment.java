@@ -47,16 +47,13 @@ public class HomeFragment extends Fragment {
             @Override
             public void onResponse(Call<List<Product>> call, Response<List<Product>> response) {
                 List<Product> items = response.body();
-                showProduct(items);
+                RVProductAdapter rvProductAdapter = new RVProductAdapter(items);
+                recyclerView.setAdapter(rvProductAdapter);
             }
+
             @Override
             public void onFailure(Call<List<Product>> call, Throwable t) {
             }
         });
-    }
-
-    private void showProduct(List<Product> showsList) {
-        RVProductAdapter rvShowProductAdapter = new RVProductAdapter(showsList);
-        recyclerView.setAdapter(rvShowProductAdapter);
     }
 }
