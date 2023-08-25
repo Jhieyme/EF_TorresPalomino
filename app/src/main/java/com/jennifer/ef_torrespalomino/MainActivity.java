@@ -44,16 +44,17 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if (item.getItemId() == R.id.favorite) {
-            Snackbar.make(binding.getRoot(), "Favorite", Snackbar.LENGTH_SHORT).show();
+            Intent favoritesIntent = new Intent(this, FavoriteActivity.class);
+            startActivity(favoritesIntent);
             return true;
         } else if (item.getItemId() == R.id.logout) {
             showDialog();
             return true;
+        } else {
+            return super.onOptionsItemSelected(item);
         }
-        return false;
     }
 
-    // Mostrar el cuadro de dialogo
     private void showDialog() {
         AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setTitle("Cerrar Sesión");

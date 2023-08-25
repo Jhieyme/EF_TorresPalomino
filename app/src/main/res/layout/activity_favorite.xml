@@ -6,6 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".FavoriteActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CD7A94"
+        app:title="Favorites"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@color/md_theme_dark_onBackground"
+        app:titleTextColor="@color/md_theme_dark_inverseSurface" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvFavorites"
+        android:layout_width="392dp"
+        android:layout_height="756dp"
+        android:layout_margin="8dp"
+        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+        app:spanCount="2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_favorite" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

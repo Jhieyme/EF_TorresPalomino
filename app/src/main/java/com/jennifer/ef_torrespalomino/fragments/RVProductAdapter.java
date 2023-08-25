@@ -18,9 +18,7 @@ import com.jennifer.ef_torrespalomino.model.Product;
 import java.util.List;
 
 public class RVProductAdapter extends RecyclerView.Adapter<RVProductAdapter.ShowViewHolder>{
-
     private List<Product> products;
-
     public RVProductAdapter(List<Product> products) {
         this.products = products;
     }

@@ -47,7 +47,7 @@ public class DetailActivity extends AppCompatActivity {
                 productEntity.setImage(image);
                 productRepository.addProduct(productEntity);
 
-                Toast.makeText(DetailActivity.this, "Producto agregado a favoritos", Toast.LENGTH_SHORT).show();
+                Toast.makeText(DetailActivity.this, "Producto agregado", Toast.LENGTH_SHORT).show();
             }
         });
     }
