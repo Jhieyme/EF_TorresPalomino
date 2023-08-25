@@ -1,4 +1,6 @@
-package com.jennifer.ef_torrespalomino.retrofit;
+package com.jennifer.ef_torrespalomino.data.retrofit;
+
+import com.jennifer.ef_torrespalomino.data.retrofit.ProductsInterface;
 
 import okhttp3.OkHttpClient;
 import okhttp3.logging.HttpLoggingInterceptor;
@@ -7,7 +9,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class RetrofitHelper {
     public static Retrofit instance;
-    public static ProductsInterface service;
 
     public  static Retrofit getInstance(){
         if (instance == null){

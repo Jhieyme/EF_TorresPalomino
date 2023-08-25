@@ -13,21 +13,16 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.jennifer.ef_torrespalomino.R;
+import com.jennifer.ef_torrespalomino.data.retrofit.ProductsInterface;
+import com.jennifer.ef_torrespalomino.data.retrofit.RetrofitHelper;
 import com.jennifer.ef_torrespalomino.databinding.FragmentHomeBinding;
 import com.jennifer.ef_torrespalomino.model.Product;
-import com.jennifer.ef_torrespalomino.retrofit.ProductsInterface;
-import com.jennifer.ef_torrespalomino.retrofit.RVShowProductAdapter;
-import com.jennifer.ef_torrespalomino.retrofit.RetrofitHelper;
-
 import java.util.List;
-
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-
 public class HomeFragment extends Fragment {
-
     private FragmentHomeBinding binding;
     private RecyclerView recyclerView;
 
@@ -42,9 +37,9 @@ public class HomeFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        recyclerView = view.findViewById(R.id.rv_shows);
+        recyclerView = view.findViewById(R.id.rv_product);
         GridLayoutManager layoutManager = new GridLayoutManager(view.getContext(), 2);
-        binding.rvShows.setLayoutManager(layoutManager);
+        binding.rvProduct.setLayoutManager(layoutManager);
 
         ProductsInterface productsInterface = RetrofitHelper.getInstance().create(ProductsInterface.class);
         Call<List<Product>> call = productsInterface.getShowProduct();
@@ -61,7 +56,7 @@ public class HomeFragment extends Fragment {
     }
 
     private void showProduct(List<Product> showsList) {
-        RVShowProductAdapter rvShowProductAdapter = new RVShowProductAdapter(showsList);
+        RVProductAdapter rvShowProductAdapter = new RVProductAdapter(showsList);
         recyclerView.setAdapter(rvShowProductAdapter);
     }
 }

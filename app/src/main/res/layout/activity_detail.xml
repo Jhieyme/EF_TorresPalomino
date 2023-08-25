@@ -6,6 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".DetailActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/tb_store"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#CD7A94"
+        app:layout_constraintEnd_toStartOf="parent"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:subtitleTextColor="@color/md_theme_dark_onBackground"
+        app:titleTextColor="@color/md_theme_dark_inverseSurface" />
+
     <TextView
         android:id="@+id/txtCategoria"
         android:layout_width="172dp"
@@ -16,40 +27,56 @@
         android:textSize="20dp"
         app:layout_constraintBottom_toTopOf="@+id/imgShowDetail"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.066"
+        app:layout_constraintHorizontal_bias="0.004"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.581" />
+        app:layout_constraintVertical_bias="0.164" />
 
     <ImageView
         android:id="@+id/imgShowDetail"
         android:layout_width="408dp"
         android:layout_height="387dp"
+        android:src="@drawable/img_referencia"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.333"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tb_store"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <ImageButton
+        android:id="@+id/btn_favorite"
+        style="@style/Widget.Material3.Button.Icon"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="456dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@null"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_favorite_border"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+         />
 
     <TextView
         android:id="@+id/txtName"
         android:layout_width="313dp"
         android:layout_height="49dp"
-        android:layout_marginTop="18dp"
+        android:layout_marginTop="20dp"
         android:text="Nombre del producto"
         android:textAlignment="center"
         android:textColorHighlight="@color/md_theme_dark_inverseSurface"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.193"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imgShowDetail" />
 
     <TextView
         android:id="@+id/txtDescrip"
-        android:layout_width="358dp"
-        android:layout_height="142dp"
+        android:layout_width="373dp"
+        android:layout_height="132dp"
         android:layout_marginTop="15dp"
         android:text="Descripcion del producto"
         android:textAlignment="center"
@@ -64,12 +91,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
-        android:textSize="16dp"
+        android:textSize="18dp"
         android:text="S/. 00.00"
         android:textAlignment="center"
         android:textColorHighlight="@color/md_theme_dark_inverseSurface"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtDescrip" />
+
+    <TextView
+        android:id="@+id/txt_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtprecio" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

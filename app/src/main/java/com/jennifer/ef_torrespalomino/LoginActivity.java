@@ -47,8 +47,6 @@ public class LoginActivity extends AppCompatActivity {
                 intent.putExtra(MainActivity.EMAIL, binding.tilEmail.getEditText().getText().toString());
                 startActivity(intent);
                 finish();
-            } else {
-                Toast.makeText(this, "Datos incorrectos", Toast.LENGTH_SHORT).show();
             }
         });
 

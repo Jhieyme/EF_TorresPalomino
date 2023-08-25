@@ -1,9 +1,10 @@
-package com.jennifer.ef_torrespalomino.retrofit;
+package com.jennifer.ef_torrespalomino.fragments;
 
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -16,11 +17,11 @@ import com.jennifer.ef_torrespalomino.model.Product;
 
 import java.util.List;
 
-public class RVShowProductAdapter extends RecyclerView.Adapter<RVShowProductAdapter.ShowViewHolder>{
+public class RVProductAdapter extends RecyclerView.Adapter<RVProductAdapter.ShowViewHolder>{
 
     private List<Product> products;
 
-    public RVShowProductAdapter(List<Product> products){
+    public RVProductAdapter(List<Product> products) {
         this.products = products;
     }
 
@@ -35,8 +36,7 @@ public class RVShowProductAdapter extends RecyclerView.Adapter<RVShowProductAdap
     @Override
     public void onBindViewHolder(@NonNull ShowViewHolder holder, int position) {
         Product product = products.get(position);
-        holder.bind(product);
-
+        holder.bind(products.get(position));
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -50,7 +50,6 @@ public class RVShowProductAdapter extends RecyclerView.Adapter<RVShowProductAdap
             }
         });
     }
-
     @Override
     public int getItemCount() {
         return products.size();
@@ -69,5 +68,4 @@ public class RVShowProductAdapter extends RecyclerView.Adapter<RVShowProductAdap
             Glide.with(itemView.getContext()).load(product.getImage()).into(binding.imgShow);
         }
     }
-
 }

@@ -1,18 +1,29 @@
 package com.jennifer.ef_torrespalomino.model;
 
 public class Product {
+        private int id;
         private String title;
         private double price;
         private String image;
         private String description;
         private String category;
 
-        public Product(String title, double price, String image, String description, String category) {
+        public Product(int id, String title, double price, String image,
+                       String description, String category) {
+                this.id = id;
                 this.title = title;
                 this.price = price;
                 this.image = image;
                 this.description = description;
                 this.category = category;
+        }
+
+        public int getId() {
+                return id;
+        }
+
+        public void setId(int id) {
+                this.id = id;
         }
 
         public String getTitle() {
